@@ -1,0 +1,83 @@
+
+/*************************
+            全体 
+**************************/
+body {
+    background-color: black;
+    overflow: hidden; /* iPhoneの選択カーソルを出ないように */
+}
+.canvas-wrap {
+    display: flex;
+}
+canvas {
+    margin: 60px auto;
+}
+
+
+/*************************
+    ゲームのコントローラー 
+**************************/
+.controller-wrap {
+    user-select: none; /* iPhoneの選択カーソルを出ないように */
+    margin: auto;
+}
+.controller-wrap {
+    width: 900px;
+    height: 400px;
+    border-radius: 30px;
+    border: 20px red solid;
+    background-color: gold;
+    position: relative;
+}
+.cross-wrap {
+    position: absolute;
+    top: 19px;
+    left: 17px;
+}
+.cross-inner {
+    position: relative;
+}
+.cross-inner div {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: black;
+}
+.cross-up {
+    left: 120px;
+    top: 0px;
+}
+.cross-left {
+    left: 0px;
+    top: 120px;
+}
+.cross-middle {
+    left: 120px;
+    top: 120px;
+}
+.cross-right {
+    left: 240px;
+    top: 120px;
+}
+.cross-down {
+    left: 120px;
+    top: 240px;
+}
+.btn-wrap {
+    position: absolute;
+    left: 600px;
+    top: 240px;
+}
+.btn-inner {
+    position: relative;
+}
+.btn-inner div{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: black;
+    border-radius: 50%;
+}
+.btn-a {
+    left: 140px;
+}
