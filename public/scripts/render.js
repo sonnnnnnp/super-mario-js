@@ -45,7 +45,13 @@ export function draw() {
     }
   
     // Draw player
-    const sprite = player.direction === 'right' ? SPRITE.MARIO.STAND_RIGHT : SPRITE.MARIO.STAND_LEFT;
+    let sprite;
+    if (player.isWalking) {
+        const walkFrames = player.direction === 'right' ? SPRITE.MARIO.WALK_RIGHT : SPRITE.MARIO.WALK_LEFT;
+        sprite = walkFrames[Math.floor(player.animationFrame) % walkFrames.length];
+    } else {
+        sprite = player.direction === 'right' ? SPRITE.MARIO.STAND_RIGHT : SPRITE.MARIO.STAND_LEFT;
+    }
     ctx.drawImage(
         spriteSheet,
         sprite.x,

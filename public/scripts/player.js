@@ -10,4 +10,7 @@ export const player = {
     speed: 10,
     isJumping: false,
     direction: 'right',  // キャラクターの向きを追加
+    isWalking: false,
+    animationFrame: 0,
+    animationTimer: 0,
 };

@@ -14,15 +14,24 @@ canvas.width = BLOCK_SIZE * 16;  // キャンバスの幅 16ブロック
 canvas.height = BLOCK_SIZE * 13; // キャンバスの高さ 15-2(見えない下の部分)ブロック
 
 function update() {
+    //プレイヤー位置更新
     player.velocityY += gravity;
     player.x += player.velocityX;
     player.y += player.velocityY;
+    
+    // アニメーション更新
+    if (Math.abs(player.velocityX) > 0) {
+        player.isWalking = true;
+        player.animationFrame += 0.15; // アニメーション速度調整
+    } else {
+        player.isWalking = false;
+        player.animationFrame = 0;
+    }
     
     checkCollision();
     updateCamera();
     
     preventOutOfBounds(); // 画面外に出ないように制限
-
 }
 
 function gameLoop() {

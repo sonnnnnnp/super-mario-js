@@ -9,6 +9,16 @@ export const SPRITE = {
     MARIO: {
         STAND_RIGHT: { x: 258, y: 0, width: 16, height: 32 },
         STAND_LEFT: { x: 239, y: 0, width: 16, height: 32 },
+        WALK_RIGHT: [
+            { x: 296, y: 0, width: 16, height: 32 },
+            { x: 314, y: 0, width: 16, height: 32 },
+            { x: 332, y: 0, width: 16, height: 32 }
+        ],
+        WALK_LEFT: [
+            { x: 201, y: 0, width: 16, height: 32 },
+            { x: 183, y: 0, width: 16, height: 32 },
+            { x: 165, y: 0, width: 16, height: 32 }
+        ]
     },
     BLOCK: {
         1: { x: 0, y: 16, width: 16, height: 16 }, // 地面のブロック
